@@ -42,6 +42,11 @@ void math_tool(void)
             break;
         case 3:
             /* multiplication */
+            printf("Multiplication selected.\n");
+             printf("Enter two numbers: ");
+             scanf("%lf %lf", &a, &b);
+             result = a * b;
+             printf("Result: %.2lf * %.2lf = %.2lf\n", a, b, result);
             break;
         case 4:
             /* division */
