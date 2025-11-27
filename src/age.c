@@ -29,4 +29,34 @@
     PRINT "Press Enter to continue..."
     WAIT FOR ENTER
 
-END FUNCTION
+END FUNCTION */
+
+void age_classifier(void)
+{
+    int age = 0;
+
+    system("clear");
+
+    printf("---- Age Classifier ----\n");
+    printf("Enter an age: ");
+    scanf("%d", &age);
+
+    system("clear");
+
+    if (age < 30)
+    {
+        printf("Category: Young\n");
+    }
+    else if (age < 60)
+    {
+        printf("Category: Adult\n");
+    }
+    else
+    {
+        printf("Category: Senior\n");
+    }
+
+    printf("\nPress Enter to continue...");
+    getchar();  // consumes leftover '\n' from scanf
+    getchar();  // waits for user to press Enter
+}
