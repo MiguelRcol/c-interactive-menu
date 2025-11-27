@@ -38,9 +38,11 @@ void math_tool(void)
             break;
             case 5:
             /* back to main menu */
+            printf("Returning to main menu...\n");
             break;
         
         default:
+        printf("Invalid option. Please try again.\n");
             break;
         }   
         if (choice !=5)
