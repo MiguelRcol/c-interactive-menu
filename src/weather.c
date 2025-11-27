@@ -14,30 +14,22 @@ void weather_advice(void)
     printf("Answer with 1 = Yes, 0 = No.\n\n");
 
     printf("Is it cold? (1/0): ");
-    scanf("%d", &cold);
+    if (scanf("%d", &cold) != 1) { int c; while ((c = getchar()) != '\n' && c != EOF) {} printf("Invalid input.\n"); wait_enter(); return; }
 
     printf("Is it raining? (1/0): ");
-    scanf("%d", &rain);
+    if (scanf("%d", &rain) != 1) { int c; while ((c = getchar()) != '\n' && c != EOF) {} printf("Invalid input.\n"); wait_enter(); return; }
 
     system("clear");
 
-    printf("---- Weather Recommendation ----\n");
+    if (cold && rain) {
+        printf("It's cold and raining – wear a warm coat and take an umbrella.\n");
+    } else if (cold) {
+        printf("It's cold – wear a warm coat.\n");
+    } else if (rain) {
+        printf("It's raining – take an umbrella.\n");
+    } else {
+        printf("Weather looks fine – no coat or umbrella needed.\n");
+    }
 
-    if (cold && rain)
-    {
-        printf("You should take: coat + umbrella.\n");
-    }
-    else if (cold && !rain)
-    {
-        printf("You should take: coat.\n");
-    }
-    else if (!cold && rain)
-    {
-        printf("You should take: umbrella.\n");
-    }
-    else
-    {
-        printf("You don't need coat or umbrella.\n");
-    }
     wait_enter();
 }

@@ -13,18 +13,21 @@ int main(void)
     {
         system("clear");
 
-        printf("----Menu----\n");
+        printf("---- Menu ----\n");
         printf("1. Math Tool\n");
         printf("2. Age classifier\n");
         printf("3. Weather advice\n");
-        printf("4. Exit\n");
-        printf("Select an option: ");
-        scanf("%d", &option);
+        printf("4. Exit\n\n");
+        printf("Choose an option: ");
 
-        system("clear");
+        if (scanf("%d", &option) != 1) {
+            // clear invalid input
+            int c; while ((c = getchar()) != '\n' && c != EOF) {}
+            option = 0;
+            continue;
+        }
 
-        switch (option)
-        {
+        switch (option) {
             case 1:
                 math_tool();
                 break;
@@ -33,15 +36,18 @@ int main(void)
                 break;
             case 3:
                 weather_advice();
-                break;  
+                break;
             case 4:
-                printf("Exiting...\n");
+                printf("Goodbye!\n");
                 break;
             default:
-                printf("Invalid option. Please try again.\n");
+                printf("Invalid option. Try again.\n");
                 break;
         }
-        
+
+        if (option != 4) {
+            wait_enter();
+        }
     }
 
     return 0;

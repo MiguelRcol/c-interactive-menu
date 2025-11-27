@@ -17,77 +17,51 @@ void math_tool(void)
         printf("2. Subtract\n");
         printf("3. Multiply\n");
         printf("4. Divide\n");
-        printf("5. Back to main menu\n");
-        printf("Select an option: ");
-        scanf("%d", &choice);
+        printf("5. Back to main menu\n\n");
+        printf("Choose an operation: ");
 
-        system("clear");
+        if (scanf("%d", &choice) != 1) {
+            int c; while ((c = getchar()) != '\n' && c != EOF) {}
+            choice = 0;
+            continue;
+        }
+
+        if (choice >=1 && choice <=4) {
+            printf("Enter first number: ");
+            if (scanf("%lf", &a) != 1) { int c; while ((c = getchar()) != '\n' && c != EOF) {} printf("Invalid input.\n"); wait_enter(); continue; }
+            printf("Enter second number: ");
+            if (scanf("%lf", &b) != 1) { int c; while ((c = getchar()) != '\n' && c != EOF) {} printf("Invalid input.\n"); wait_enter(); continue; }
+        }
 
         switch (choice)
         {
             case 1:
-                printf("Addition selected.\n");
-                printf("Enter two numbers: ");
-                scanf("%lf %lf", &a, &b);
-
-                system("clear");    // clean result view
-
                 result = a + b;
-                printf("Result: %.2lf + %.2lf = %.2lf\n", a, b, result);
+                printf("\nResult: %.6g + %.6g = %.6g\n", a, b, result);
                 break;
-
             case 2:
-                printf("Subtraction selected.\n");
-                printf("Enter two numbers: ");
-                scanf("%lf %lf", &a, &b);
-
-                system("clear");
-
                 result = a - b;
-                printf("Result: %.2lf - %.2lf = %.2lf\n", a, b, result);
+                printf("\nResult: %.6g - %.6g = %.6g\n", a, b, result);
                 break;
-
             case 3:
-                printf("Multiplication selected.\n");
-                printf("Enter two numbers: ");
-                scanf("%lf %lf", &a, &b);
-
-                system("clear");
-
                 result = a * b;
-                printf("Result: %.2lf * %.2lf = %.2lf\n", a, b, result);
+                printf("\nResult: %.6g * %.6g = %.6g\n", a, b, result);
                 break;
-
             case 4:
-                printf("Division selected.\n");
-                printf("Enter two numbers: ");
-                scanf("%lf %lf", &a, &b);
-
-                system("clear");
-
-                if (b != 0)
-                {
+                if (b == 0) {
+                    printf("\nError: Division by zero is not allowed.\n");
+                } else {
                     result = a / b;
-                    printf("Result: %.2lf / %.2lf = %.2lf\n", a, b, result);
-                }
-                else
-                {
-                    printf("Error: Division by zero is not allowed.\n");
+                    printf("\nResult: %.6g / %.6g = %.6g\n", a, b, result);
                 }
                 break;
-
             case 5:
-                printf("Returning to main menu...\n");
                 break;
-
             default:
-                printf("Invalid option. Please try again.\n");
+                printf("Invalid choice, try again.\n");
                 break;
         }
 
-        if (choice != 5)
-        {
-            wait_enter();
-        }
+        if (choice != 5) wait_enter();
     }
 }

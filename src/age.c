@@ -1,7 +1,7 @@
 #include "age.h"
+#include "helper.h"   // ensure wait_enter() is declared
 #include <stdio.h>
 #include <stdlib.h>
-#include "helper.h"
 
 void age_classifier(void)
 {
