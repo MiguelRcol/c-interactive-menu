@@ -1,5 +1,6 @@
 #include "math.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 // this funtion provides basic math operations
 void math_tool(void)
