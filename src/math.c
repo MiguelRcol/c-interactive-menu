@@ -26,6 +26,11 @@ void math_tool(void)
         {
         case 1:
             /* addition */
+            printf("Addition selected.\n");
+             printf("Enter two numbers: ");
+             scanf("%lf %lf", &a, &b);
+             result = a + b;
+             printf("Result: %.2lf + %.2lf = %.2lf\n", a, b, result);
             break;
         case 2:
             /* subtraction */
