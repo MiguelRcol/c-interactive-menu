@@ -18,7 +18,38 @@ void math_tool(void)
         printf("4. Divide\n");
         printf("5. Back to main menu\n");
         printf("Select an option: ");
-        scanf("%d", &choice);   
+        scanf("%d", &choice);
+
+        system("clear");
+
+        switch (choice)
+        {
+        case 1:
+            /* addition */
+            break;
+        case 2:
+            /* subtraction */
+            break;
+        case 3:
+            /* multiplication */
+            break;
+        case 4:
+            /* division */
+            break;
+            case 5:
+            /* back to main menu */
+            break;
+        
+        default:
+            break;
+        }   
+        if (choice !=5)
+        {
+            printf("\nPress Enter to continue...");
+            getchar();  // consumes leftover '\n' from scanf
+            getchar();  // waits for user to press Enter    
+        }
+        
     }
     
     //TODO: implement math tool
@@ -29,6 +60,6 @@ void math_tool(void)
     // 4. Divide
     // 5. Back to main menu
 
-    printf("Math tool coming soon!\n");
+
 }
 
