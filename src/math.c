@@ -4,7 +4,7 @@
 // this funtion provides basic math operations
 void math_tool(void)
 {   
-    int choice;
+    int choice=0;
     double a=0, b=0, result=0;
 
     while (choice !=5)  
