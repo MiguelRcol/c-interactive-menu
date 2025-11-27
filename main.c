@@ -7,9 +7,10 @@
 
 int main(void){
     // Program flow:
-    system("clear");
+    
     int option = 0; 
-    printf("----menu----\n");
+    system("clear");
+    printf("----Menu----\n");
     printf("1. Math Tool\n");
     printf("2. Age classifier\n");
     printf("3. weather advice\n");
