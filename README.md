@@ -13,7 +13,7 @@ This project is part of my personal learning roadmap, aiming to:
 This project helped me practice:
 
 - Building a modular C project separated into multiple source/header files
-- Using fundamental control flow (if, else if, switch, loops`)
+- Using fundamental control flow (if, else if, switch, loops)
 - Designing a structured, menu-driven CLI application
 - Implementing input validation (numeric ranges, logical constraints)
 - Organizing programs with reusable helper utilities
@@ -26,7 +26,6 @@ This project helped me practice:
 - Modular design: separate .c/.h files for each feature.
 - Input validation and defensive checks (e.g., divide-by-zero, age range).
 - Small, easy-to-read codebase — great for learning and extending.
-...existing code...
 
 ## Project layout
 
