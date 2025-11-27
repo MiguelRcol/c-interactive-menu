@@ -39,8 +39,7 @@ int main(void)
                 math_tool();
                 break;
             case 2:
-                // age_classifier(); // not implemented yet
-                printf("Age classifier coming soon!\n");
+                age_classifier();
                 break;
             case 3:
                 // weather_advice(); // not implemented yet
