@@ -2,6 +2,7 @@
 #include <stdlib.h>     // for system()
 #include "src/math.h"
 #include "src/age.h"
+#include "src/weather.h"    // include weather header
 
 int main(void)
 {
@@ -42,9 +43,8 @@ int main(void)
                 age_classifier();
                 break;
             case 3:
-                // weather_advice(); // not implemented yet
-                printf("Weather advice coming soon!\n");
-                break;
+                weather_advice();
+                break;  
             case 4:
                 printf("Exiting...\n");
                 break;
