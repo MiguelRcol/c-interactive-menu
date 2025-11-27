@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>     // for system()
 #include "src/math.h"
+#include "src/age.h"
 
 int main(void)
 {
