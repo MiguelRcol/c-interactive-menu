@@ -1,5 +1,8 @@
 # C Interactive Menu
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+[![CI](https://github.com/miguel/c-interactive-menu/actions/workflows/ci.yml/badge.svg)](https://github.com/miguel/c-interactive-menu/actions/workflows/ci.yml)
+
 A compact, modular command‑line application written in C to practice core C concepts.  
 Provides small, focused tools (math operations, age classification, and weather advice) behind a simple interactive menu.
 
@@ -73,6 +76,17 @@ Manual compilation
 ```bash
 gcc main.c src/math.c src/age.c src/weather.c src/helper.c -o menu
 ./menu
+```
+
+CI / automated checks
+
+A lightweight GitHub Actions workflow (ci.yml) compiles the project and runs a smoke test that validates compilation. The CI badge above will show build status once you push this repo to GitHub.
+
+Local smoke-test
+
+```bash
+# quick smoke compile/test
+bash tests/smoke_test.sh
 ```
 
 ## Example usage
