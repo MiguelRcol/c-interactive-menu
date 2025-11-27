@@ -1,5 +1,5 @@
-#ifndef UTILS_H
-#define UTILS_H
+#ifndef HELPER_H
+#define HELPER_H
 
 void wait_enter(void);
 
