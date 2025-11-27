@@ -8,6 +8,7 @@
 int main(void){
     // Program flow:
     system("clear");
+    int option = 0; 
     printf("----menu----\n");
     printf("1. Math Tool\n");
     printf("2. Age classifier\n");
@@ -18,7 +19,7 @@ int main(void){
 // clear terminal
 while (option != 4)     
 {
-    system("clear")
+    system("clear");
 }
     // check selected option and execute action
     switch(option)
