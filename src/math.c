@@ -50,6 +50,18 @@ void math_tool(void)
             break;
         case 4:
             /* division */
+            printf("Division selected.\n");
+             printf("Enter two numbers: ");
+             scanf("%lf %lf", &a, &b);
+             if (b != 0)
+             {
+                 result = a / b;
+                 printf("Result: %.2lf / %.2lf = %.2lf\n", a, b, result);
+             }
+             else
+             {
+                 printf("Error: Division by zero is not allowed.\n");
+             }
             break;
             case 5:
             /* back to main menu */
