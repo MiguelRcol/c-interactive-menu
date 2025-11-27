@@ -1,6 +1,6 @@
 #ifndef AGE_H
 #define AGE_H
 
-void age_classifier_tool(void);
+void age_classifier(void);
 
 #endif /* AGE_H */
