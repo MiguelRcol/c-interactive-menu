@@ -37,7 +37,7 @@ c-interactive-menu/
 └── src/
     ├── math.c, math.h      # basic arithmetic operations
     ├── age.c, age.h        # age classification and validation
-    ├── weather.c, weather.h# weather-based advice
+    ├── weather.c, weather.h  # weather-based advice
     └── helper.c, helper.h  # input helpers and common utilities
 ```
 
@@ -53,14 +53,10 @@ Prerequisites: GCC or any standard C compiler.
 
 You can compile and run this project either using the Makefile (recommended) or using a manual gcc command.
 
-Using the Makefile (recommended)
-
 This project includes an advanced Makefile that:
 
 - Compiles each .c file into its own .o file
-
 - Only rebuilds changed modules
-
 - Links all objects into the final menu binary
 
 To build the program:
