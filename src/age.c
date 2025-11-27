@@ -2,7 +2,7 @@
 #include <stdio.h> 
 #include <stdlib.h>  // for system("clear")
 
-FUNCTION age_classifier:
+/*FUNCTION age_classifier:
 
     // Clear terminal for clean UI
     CLEAR SCREEN
