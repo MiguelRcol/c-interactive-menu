@@ -1,137 +1,99 @@
-# c-interactive-menu
+# C Interactive Menu
 
-A modular and interactive command-line application written in C.  
-This project provides a clean menu-driven interface offering several utilities such as math operations, age classification, and weather-based recommendations. It was built as part of a personal roadmap to strengthen C fundamentals, modular programming, and terminal UI design.
-
----
-
-## 📌 Features
-
-- Clean interactive terminal menu  
-- Modular architecture using multiple `.c` / `.h` files  
-- Input validation (age ranges, division by zero, etc.)  
-- Math operations (+, -, *, /)  
-- Age classifier (Young / Adult / Senior)  
-- Weather advisor (coat / umbrella logic)  
-- Reusable helper utilities (`wait_enter()`)  
-- Clean code structure for easy expansion  
-
-## Project structure
-
-c-interactive-menu/
-├── main.c             # Main menu and program loop
-├── README.md
-├── Makefile           # (Optional) Build automation
-└── src/
-    ├── math.c         # Math tool implementation
-    ├── math.h
-    ├── age.c          # Age classifier implementation
-    ├── age.h
-    ├── weather.c      # Weather advice implementation
-    ├── weather.h
-    ├── helper.c       # Shared helper functions (wait_enter, etc.)
-    └── helper.h
-
-## Learning Goals
-
-This project helped me practice:
-
-Building a modular C project separated into multiple source/header files
-
-Using fundamental control flow: if, else if, switch, loops
-
-Designing a structured, menu-driven CLI application
-
-Implementing input validation (numeric ranges, logical constraints)
-
-Organizing programs with reusable helper utilities
-
-Compiling multi-file C programs
-
-Writing clean Git commit messages and managing version control
-
-## Tools Overview
-
-Math Tool
-
-Add two numbers
-
-Subtract two numbers
-
-Multiply two numbers
-
-Divide two numbers (with division-by-zero protection)
-
-Uses double for numerical precision
-
-Age Classifier
-
-Classifies user age into:
-
-Young → under 30
-
-Adult → 30 to 59
-
-Senior → 60 and above
-
-Includes validation for age range (0–120)
-
-Weather Advisor
-
-Simple yes/no tool:
-
-cold = 1/0
-
-rain = 1/0
-
-Rules:
-
-Cold + Rain → Coat + Umbrella
-
-Cold + No rain → Coat
-
-Not cold + Rain → Umbrella
-
-Neither → Nothing required
-
-## Purpose
+A compact, modular command‑line application written in C to practice core C concepts.  
+Provides small, focused tools (math operations, age classification, and weather advice) behind a simple interactive menu.
 
 This project is part of my personal learning roadmap, aiming to:
 
-Demonstrate solid understanding of C
+- Demonstrate solid understanding of C fundamentals
+- Build professional, modular command-line applications
+- Practice clean architecture and maintainable code
+- Develop real-world terminal programs suitable for a portfolio
 
-Build professional, modular applications
+This project helped me practice:
 
-Practice clean architecture and maintainable code
+- Building a modular C project separated into multiple source/header files
+- Using fundamental control flow (if, else if, switch, loops`)
+- Designing a structured, menu-driven CLI application
+- Implementing input validation (numeric ranges, logical constraints)
+- Organizing programs with reusable helper utilities
+- Compiling multi-file C programs
+- Writing clean Git commit messages and managing version control
 
-Develop real-world terminal programs for my portfolio
+## Highlights
 
-## License
+- Menu-driven CLI with clear UX.
+- Modular design: separate .c/.h files for each feature.
+- Input validation and defensive checks (e.g., divide-by-zero, age range).
+- Small, easy-to-read codebase — great for learning and extending.
+...existing code...
 
-This project is open-source and free to use under the MIT License.
+## Project layout
 
+```
+c-interactive-menu/
+├── Makefile
+├── main.c
+├── README.md
+└── src/
+    ├── math.c, math.h      # basic arithmetic operations
+    ├── age.c, age.h        # age classification and validation
+    ├── weather.c, weather.h# weather-based advice
+    └── helper.c, helper.h  # input helpers and common utilities
+```
 
----
+## Features
 
-## How to Run
+- Math tool: add, subtract, multiply, divide (double precision, division safely guarded)
+- Age classifier: validates age (0–120) and classifies as Young, Adult, or Senior
+- Weather advisor: simple yes/no inputs to suggest coat/umbrella
 
-### Using the Makefile (recommended)
+## Build & run
 
-This project includes an advanced Makefile that compiles each `.c` file into its own `.o` file and only rebuilds changed modules.  
-This is the preferred way to compile the project.
+Prerequisites: GCC or any standard C compiler.
+
+You can compile and run this project either using the Makefile (recommended) or using a manual gcc command.
+
+Using the Makefile (recommended)
+
+This project includes an advanced Makefile that:
+
+- Compiles each .c file into its own .o file
+
+- Only rebuilds changed modules
+
+- Links all objects into the final menu binary
 
 To build the program:
 
 ```bash
-
+# build
 make
 
-or else you could
+# run
+./menu
+```
 
-From the project root:
-
+Manual compilation
 ```bash
 gcc main.c src/math.c src/age.c src/weather.c src/helper.c -o menu
 ./menu
----
+```
 
+## Example usage
+
+Run the program and follow the numbered menu to choose a tool. Input is validated where appropriate and the program returns to the menu after each operation.
+
+## Development notes
+
+- Keep functions small and single-purpose.
+- Add new tools into `src/` with matching header files; update `main.c` to register the menu entry.
+- Use `helper.c` for shared I/O and validation utilities.
+
+## Contributing
+
+Open issues or submit a pull request. Keep changes small and focused with descriptive commits.
+
+## License
+
+This project is open-source and free to use under the MIT License.
