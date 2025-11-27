@@ -115,9 +115,23 @@ This project is open-source and free to use under the MIT License.
 
 ## How to Run
 
+### Using the Makefile (recommended)
+
+This project includes an advanced Makefile that compiles each `.c` file into its own `.o` file and only rebuilds changed modules.  
+This is the preferred way to compile the project.
+
+To build the program:
+
+```bash
+
+make
+
+or else you could
+
 From the project root:
 
 ```bash
 gcc main.c src/math.c src/age.c src/weather.c src/helper.c -o menu
 ./menu
 ---
+
