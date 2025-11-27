@@ -3,6 +3,7 @@
 #include "src/math.h"
 #include "src/age.h"
 #include "src/weather.h"    // include weather header
+#include "src/helper.h"   // include helper header
 
 int main(void)
 {
@@ -40,13 +41,7 @@ int main(void)
                 printf("Invalid option. Please try again.\n");
                 break;
         }
-
-        if (option != 4)
-        {
-            printf("\nPress Enter to continue...");
-            getchar();  // consumes leftover '\n' from scanf
-            getchar();  // waits for real Enter
-        }
+        
     }
 
     return 0;

@@ -2,7 +2,7 @@
 #include "weather.h"
 #include <stdio.h>
 #include <stdlib.h>   // for system("clear")
-
+#include "helper.h"
 void weather_advice(void)
 {
     int cold = 0;
@@ -39,8 +39,5 @@ void weather_advice(void)
     {
         printf("You don't need coat or umbrella.\n");
     }
-
-    printf("\nPress Enter to continue...");
-    getchar();  // consume leftover '\n'
-    getchar();  // wait for Enter
+    wait_enter();
 }

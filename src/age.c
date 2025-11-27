@@ -43,7 +43,5 @@ void age_classifier(void)
     {
         printf("Category: Senior\n");
     }
-
-    printf("\nPress Enter to continue...");
-    getchar(); getchar();
+    wait_enter();   
 }

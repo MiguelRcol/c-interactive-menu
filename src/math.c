@@ -1,7 +1,7 @@
 #include "math.h"
 #include <stdio.h>
 #include <stdlib.h>  // for system("clear")
-
+#include "helper.h"
 // This function provides basic math operations.
 void math_tool(void)
 {
@@ -87,9 +87,7 @@ void math_tool(void)
 
         if (choice != 5)
         {
-            printf("\nPress Enter to continue...");
-            getchar();  // consume '\n'
-            getchar();  // wait for Enter
+            wait_enter();
         }
     }
 }
