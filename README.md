@@ -1,7 +1,6 @@
 # C Interactive Menu
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
-[![CI](https://github.com/miguel/c-interactive-menu/actions/workflows/ci.yml/badge.svg)](https://github.com/miguel/c-interactive-menu/actions/workflows/ci.yml)
 
 A compact, modular command‑line application written in C to practice core C concepts.  
 Provides small, focused tools (math operations, age classification, and weather advice) behind a simple interactive menu.
